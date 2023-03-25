@@ -56,6 +56,14 @@ const QRLocation = () => {
 
     const form = new FormData();
 
+    form.append("id", " ");
+    form.append("serviceName", " ");
+    form.append("action", " ");
+    form.append("value", " ");
+    form.append("comment", " ");
+    form.append("uploaded", " ");
+    form.append("image", " ");
+
     inputField.forEach((item) => {
       return (
         form.append("id", item.id),

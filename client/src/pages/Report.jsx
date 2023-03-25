@@ -58,7 +58,9 @@ const Report = () => {
     if (!client || !fromDate || !toDate)
       return toast.error("Please select all required fields");
 
-    dispatch(createReport({ client, subLocation, service, fromDate, toDate, user }));
+    dispatch(
+      createReport({ client, subLocation, service, fromDate, toDate, user })
+    );
   };
 
   if (reportLoading) return <Loading />;
