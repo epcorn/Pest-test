@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import { v2 as cloudinary } from "cloudinary";
 import fileUpload from "express-fileupload";
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 import userRouter from "./routes/userRoute.js";
 import companyRouter from "./routes/companyRoute.js";
@@ -26,6 +29,9 @@ cloudinary.config({
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 
 // only when ready to deploy
 app.use(express.static(path.resolve(__dirname, "./client/build")));

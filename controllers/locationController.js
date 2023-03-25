@@ -24,7 +24,7 @@ export const addLocation = async (req, res) => {
     const loc = await Location.create(req.body);
 
     const buf = await qrCodeGenerator(
-      `http://localhost:3000/qr-location/${loc._id}`,
+      `https://pps.sat9.in/qr-location/${loc._id}`,
       floor,
       location
     );
