@@ -6,7 +6,7 @@ import {
   deleteUser,
   loginUser,
   registerUser,
-} from "../controllers/UserController.js";
+} from "../controllers/userController.js";
 import { authenticateUser, authorizeUser } from "../middleware/auth.js";
 
 router.route("/login").post(loginUser);
